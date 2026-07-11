@@ -63,7 +63,7 @@ function buildLeadMessage() {
   const restricao = getFieldValue(formData, "restricao");
 
   return [
-    "Olá, Bruno!",
+    "Olá, Yuki!",
     "",
     "Preenchi a pré-análise de crédito pelo Minha Casa Minha Vida.",
     "",
