@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Minha Casa Minha Vida</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="how-it-works" aria-labelledby="howTitle">
+        <div class="section-heading">
+          <h1 id="howTitle">Como funciona</h1>
+          <p>Um primeiro passo simples para reduzir dúvidas antes de procurar imóvel.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span>PASSO 1</span>
+            <h2>Responda algumas perguntas rápidas</h2>
+            <p>Tempo médio: menos de 2 minutos.</p>
+          </article>
+
+          <article class="step-card">
+            <span>PASSO 2</span>
+            <h2>Receba contato pelo WhatsApp</h2>
+            <p>O atendimento continua de forma simples e direta.</p>
+          </article>
+
+          <article class="step-card">
+            <span>PASSO 3</span>
+            <h2>Envie os documentos necessários</h2>
+            <p>Somente depois do contato inicial.</p>
+          </article>
+
+          <article class="step-card">
+            <span>PASSO 4</span>
+            <h2>Receba uma estimativa personalizada</h2>
+            <p>Baseada no seu perfil e nas condições disponíveis.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="form-section" aria-labelledby="formTitle">
+        <div class="form-intro">
+          <span>Pré-análise gratuita • menos de 2 minutos • sem compromisso</span>
+          <h2 id="formTitle">Descubra suas condições de financiamento</h2>
+          <p>Responda algumas perguntas rápidas. Nenhum documento é solicitado agora.</p>
+        </div>
+
+        <form class="lead-form" id="leadForm" novalidate>
+          <div class="form-grid">
+            <label>
+              Nome completo
+              <input type="text" name="nome" autocomplete="name" required placeholder="Seu nome" />
+            </label>
+
+            <label>
+              WhatsApp
+              <input
+                type="tel"
+                name="whatsapp"
+                id="whatsapp"
+                autocomplete="tel"
+                inputmode="tel"
+                required
+                placeholder="(41) 99999-9999"
+              />
+            </label>
+
+            <label>
+              Pretende adquirir
+              <select name="aquisicao" required>
+                <option value="">Selecione</option>
+                <option>Sozinho(a)</option>
+                <option>Com composição de renda</option>
+              </select>
+            </label>
+
+            <label>
+              Tipo de trabalho
+              <select name="trabalho" required>
+                <option value="">Selecione</option>
+                <option>Trabalho registrado</option>
+                <option>Autônomo(a)</option>
+                <option>Empresário(a)</option>
+                <option>Servidor(a) público(a)</option>
+                <option>Informal</option>
+              </select>
+            </label>
+
+            <fieldset>
+              <legend>Tem mais de 3 anos de carteira assinada?</legend>
+              <div class="option-row">
+                <label><input type="radio" name="carteira" value="Sim" required /> Sim</label>
+                <label><input type="radio" name="carteira" value="Não" /> Não</label>
+              </div>
+            </fieldset>
+
+            <label>
+              Renda bruta mensal
+              <input type="text" name="renda" id="renda" inputmode="numeric" required placeholder="R$ 4.500,00" />
+            </label>
+
+            <fieldset>
+              <legend>Possui FGTS?</legend>
+              <div class="option-row">
+                <label><input type="radio" name="fgts" value="Sim" required /> Sim</label>
+                <label><input type="radio" name="fgts" value="Não" /> Não</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Possui filhos menores de idade?</legend>
+              <div class="option-row">
+                <label><input type="radio" name="filhos" value="Sim" required /> Sim</label>
+                <label><input type="radio" name="filhos" value="Não" /> Não</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Possui financiamento ativo?</legend>
+              <div class="option-row">
+                <label><input type="radio" name="financiamento" value="Sim" required /> Sim</label>
+                <label><input type="radio" name="financiamento" value="Não" /> Não</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Possui restrição no CPF?</legend>
+              <div class="option-row">
+                <label><input type="radio" name="restricao" value="Sim" required /> Sim</label>
+                <label><input type="radio" name="restricao" value="Não" /> Não</label>
+              </div>
+            </fieldset>
+
+            <label class="full">
+              Cidade ou região de interesse
+              <input
+                type="text"
+                name="cidade"
+                autocomplete="address-level2"
+                required
+                placeholder="Ex.: Curitiba, Colombo, São José dos Pinhais"
+              />
+            </label>
+          </div>
+
+          <button class="submit-button" type="submit">Descobrir quanto posso financiar</button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite">
+            Seus dados serão organizados em uma mensagem para WhatsApp. Nenhuma informação é salva neste site.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
