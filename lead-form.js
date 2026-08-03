@@ -113,9 +113,18 @@ leadForm.addEventListener("submit", (event) => {
     return;
   }
 
+  // Dispara o evento Lead para o Meta Pixel
+  if (typeof fbq === "function") {
+    fbq("track", "Lead");
+  }
+
   const message = encodeURIComponent(buildLeadMessage());
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
 
   setStatus("Mensagem pronta. Abrindo o WhatsApp...");
-  window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+  // Pequeno atraso para garantir o envio do evento ao Meta
+  setTimeout(() => {
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+  }, 300);
 });
